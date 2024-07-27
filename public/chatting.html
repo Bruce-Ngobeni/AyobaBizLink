@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayoba Business Chat</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <header class="bg-blue-600 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold">Ayoba Business Chat</h1>
+            <nav>
+                <ul class="flex space-x-4">
+                    <li><a href="./home.html" class="hover:text-gray-300">Home</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Contacts</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Messages</a></li>
+                    <li><a href="#" class="hover:text-gray-300">Settings</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto mt-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="col-span-1">
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <h2 class="text-xl font-semibold mb-4">Contacts</h2>
+                    <ul class="space-y-2">
+                        <li class="p-2 rounded-lg hover:bg-gray-100 cursor-pointer">
+                            <div class="flex items-center">
+                                <img src="https://via.placeholder.com/40" alt="Customer 1" class="rounded-full mr-3">
+                                <div>
+                                    <h3 class="font-semibold">Customer 1</h3>
+                                    <p class="text-gray-500">Last message: 2 hours ago</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="p-2 rounded-lg hover:bg-gray-100 cursor-pointer">
+                            <div class="flex items-center">
+                                <img src="https://via.placeholder.com/40" alt="Customer 2" class="rounded-full mr-3">
+                                <div>
+                                    <h3 class="font-semibold">Customer 2</h3>
+                                    <p class="text-gray-500">Last message: 1 day ago</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="p-2 rounded-lg hover:bg-gray-100 cursor-pointer">
+                            <div class="flex items-center">
+                                <img src="https://via.placeholder.com/40" alt="Customer 3" class="rounded-full mr-3">
+                                <div>
+                                    <h3 class="font-semibold">Customer 3</h3>
+                                    <p class="text-gray-500">Last message: 3 days ago</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-span-2">
+                <div class="bg-white p-6 rounded-lg shadow-md h-96 overflow-y-auto" id="messageHistory">
+                    <h2 class="text-xl font-semibold mb-4">Messages</h2>
+                    <div id="messages" class="space-y-4">
+                        <div class="bg-blue-100 p-3 rounded-lg max-w-md">
+                            <p>Hi there! How can I help you today?</p>
+                            <p class="text-gray-500 text-sm">Customer 1 • 2 hours ago</p>
+                        </div>
+                        <div class="bg-white p-3 rounded-lg max-w-md ml-auto">
+                            <p>I have a question about your product. Can you please provide more information?</p>
+                            <p class="text-gray-500 text-sm">You • 1 hour ago</p>
+                        </div>
+                        <div class="bg-blue-100 p-3 rounded-lg max-w-md">
+                            <p>Sure, I'd be happy to help! What would you like to know?</p>
+                            <p class="text-gray-500 text-sm">Customer 1 • 1 hour ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-4">
+                    <textarea id="messageInput" class="
