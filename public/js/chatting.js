@@ -1,37 +1,36 @@
 // document.addEventListener('DOMContentLoaded', function() {
-//     // const username = document.getElementById('username');
-//     // const email = document.getElementById('email');
-//     // const password = document.getElementById('password');
-//     // const confirmPassword = document.getElementById('confirm-password');
-//     // const registerForm = document.getElementById('registerForm');
 //     const messageInput = document.getElementById('messageInput');
 //     const sendButton = document.getElementById('sendButton');
-
-//     // const userData = () => {
-//     //     console.log('Username:', username.value);
-//     //     console.log('Email:', email.value);
-//     //     console.log('Password:', password.value);
-//     //     console.log('Confirm Password:', confirmPassword.value);
-//     // };
-
-//     const captureMessage = () => {
-//         console.log('Message:', messageInput.value);
-//     };
-
-//     // registerForm.addEventListener('submit', function(event) {
-//     //     event.preventDefault(); // Prevent the form from submitting
-//     //     userData(); // Call the function to log the form data
-//     // });
+//     const lastText = document.querySelector('.last-text');
+//     const contacts = document.querySelectorAll('.contact-item'); // Assuming each customer has this class
+//     const currentCustomerElement = document.getElementById('currentCustomer'); // Assuming this is the h2 element
 
 //     sendButton.addEventListener('click', function() {
-//         captureMessage(); // Call the function to log the message input
+//         const message = messageInput.value;
+//         console.log(message);
+//         // Update the last-text element
+//         lastText.textContent = message;
+
+//         // Clear the textarea
+//         messageInput.value = '';
+//     });
+
+//     contacts.forEach(contact => {
+//         contact.addEventListener('click', function() {
+//             const customerName = this.querySelector('.customer-name').textContent;
+//             currentCustomerElement.textContent = customerName;
+//         });
 //     });
 // });
+
 
 document.addEventListener('DOMContentLoaded', function() {
     const messageInput = document.getElementById('messageInput');
     const sendButton = document.getElementById('sendButton');
     const lastText = document.querySelector('.last-text');
+    const contacts = document.querySelectorAll('.contact-item'); // Select all contact items
+    const currentCustomerElement = document.getElementById('currentCustomer'); // The h2 element
+    
 
     sendButton.addEventListener('click', function() {
         const message = messageInput.value;
@@ -39,8 +38,20 @@ document.addEventListener('DOMContentLoaded', function() {
         // Update the last-text element
         lastText.textContent = message;
 
-
         // Clear the textarea
         messageInput.value = '';
+
+        console.log(currentCustomerElement);
+        console.log("Hey: ",currentCustomerElement.value);
+    });
+
+    contacts.forEach(contact => {
+        contact.addEventListener('click', function() {
+            
+            const customerName = this.querySelector('.customer-name').textContent;
+            
+            currentCustomerElement.textContent = customerName;
+        });
     });
 });
+
